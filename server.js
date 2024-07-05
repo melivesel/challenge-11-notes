@@ -54,6 +54,40 @@ app.post('/notes', (req, res) => {
       res.json(newNote);
     });
   });
+  app.delete('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+  
+  
+    fs.readFile(path.join(__dirname, filePath), 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to read notes from database' });
+        return;
+      }
+  
+      let notes = JSON.parse(data);
+  
+      const noteIndex = notes.findIndex(note => note.id === noteId);
+  
+      if (noteIndex === -1) {
+        res.status(404).json({ error: 'Note not found' });
+        return;
+      }
+  
+ 
+      const deletedNote = notes.splice(noteIndex, 1)[0];
+  
+      fs.writeFile(path.join(__dirname, filePath), JSON.stringify(notes, null, 2), (err) => {
+        if (err) {
+          console.error(err);
+          res.status(500).json({ error: 'Failed to delete note from database' });
+          return;
+        }
+  
+        res.json(deletedNote);
+      });
+    });
+  });
 });
 
 
