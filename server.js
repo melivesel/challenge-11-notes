@@ -21,7 +21,7 @@ app.get('/notes', (req, res) => {
 
 app.get('/api/notes', (req, res) => res.json(noteData));
 
-app.post('/api/notes', (req, res) => {
+app.post('/notes', (req, res) => {
   // Read the existing notes from db.json
   fs.readFile(path.join(__dirname, filePath), 'utf8', (err, data) => {
     if (err) {
