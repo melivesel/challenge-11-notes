@@ -20,10 +20,19 @@ app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
-app.get('/api/notes', (req, res) => res.json(noteData))
+app.get('/api/notes', (req, res) => {
+  fs.readFile(path.join(__dirname, filePath), 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Failed to read notes from database' });
+    }
+
+    const updatedNotes = JSON.parse(data);
+    res.json(updatedNotes);
+  });
+});
 
 app.post('/api/notes', (req, res) => {
-
   if (!req.body.title || !req.body.text) {
     return res.status(400).json({ error: 'Title and/or text missing in request body' });
   }
@@ -50,7 +59,16 @@ app.post('/api/notes', (req, res) => {
         return res.status(500).json({ error: 'Failed to save note to database' });
       }
 
-      res.json(newNote);
+      // Read the updated db.json file to get the new list of notes
+      fs.readFile(path.join(__dirname, filePath), 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+          return res.status(500).json({ error: 'Failed to read notes from database' });
+        }
+
+        const updatedNotes = JSON.parse(data);
+        res.json(updatedNotes);
+      });
     });
   });
 });
@@ -84,7 +102,8 @@ app.delete('/api/notes/:id', (req, res) => {
 
       res.json(deletedNote);
     });
-  });
+   
+ }); 
 });
 
 app.listen(PORT, () => {
