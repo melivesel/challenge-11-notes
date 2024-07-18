@@ -1,73 +1,17 @@
 [
   {
-    "title": "Test title 2",
-    "text": "Test text 2"
+    "id": "600b6090-33cb-4b21-a563-14b008e603cb",
+    "title": "Your Note Title",
+    "text": "Your Note Text"
   },
   {
-    "id": "74125191-f5b5-4d23-b5ed-d914fd1bf862"
-  },
-  {
-    "id": "4530705d-3c41-478d-bc64-e5025a79376d"
-  },
-  {
-    "id": "924e5758-6732-44d4-9edf-ab9515c12776"
-  },
-  {
-    "id": "bfe03654-18aa-4037-9fbf-d8ed44f43363",
-    "title": "Test title 2",
-    "text": "Test text 2"
-  },
-  {
-    "id": "57cb5873-6ee1-4dcd-98d4-ac0a7e922a53"
-  },
-  {
-    "id": "8223d01c-0d7f-4a32-bfd6-096adb7355ff",
-    "title": "Test title 2",
-    "text": "Test text 2"
-  },
-  {
-    "id": "d326dd66-560f-477e-8979-a34bb3744c7f",
-    "title": "sertrg",
-    "text": "sdgsrdg\n"
-  },
-  {
-    "id": "dcb7260e-da21-4af1-813a-5f29514fa25c",
-    "title": "aksjdakfsdkfj",
-    "text": "asdfklsdjfkdjf"
-  },
-  {
-    "id": "f7244bc7-ea09-43b1-a3bf-ee09837476eb",
-    "title": "asefaga",
-    "text": "lknzdgfzsdf"
-  },
-  {
-    "id": "96079e5d-5527-4603-b61a-ee3d7e78334f",
+    "id": "2f3327c9-0c08-479b-8ab3-f068ef236809",
     "title": "hello ",
-    "text": "cool stuff"
+    "text": "lookie here\n"
   },
   {
-    "id": "48b848e5-65c1-4841-806a-a2fafbd1331a",
-    "title": "hello ",
-    "text": "cool stuff"
-  },
-  {
-    "id": "c44d8e28-150f-4a7e-85e9-c96e4962f47f",
-    "title": "hello ",
-    "text": "cool stuff"
-  },
-  {
-    "id": "ed3f91d4-0137-4daa-a18b-6f118f955d65",
-    "title": "hello 2",
-    "text": "cooler stuff"
-  },
-  {
-    "id": "d9fef139-ec05-4613-a76c-f61e4b6a95a1",
-    "title": "new note 5:41 ",
-    "text": "look at this!"
-  },
-  {
-    "id": "b30ad8d3-4ae8-4b1a-978d-444aafae2c0a",
-    "title": "new note 5:41 ",
-    "text": "look at this!"
+    "id": "24094f1a-9836-4b4b-a4b7-b616d79d9ee2",
+    "title": "new note!!!",
+    "text": "this is working \n"
   }
 ]
